@@ -1,6 +1,5 @@
 ###*
-  @fileoverview este.react.
-  @namespace este.react
+  @fileoverview webdao.global
 ###
 goog.provide 'webdao.global'
 

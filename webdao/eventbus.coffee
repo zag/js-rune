@@ -3,7 +3,6 @@
 ###
 #class webdao.Eventbus extends este.Base
 goog.provide 'webdao.Eventbus'
-goog.require 'webdao.Eventbusactual'
 goog.require 'este.Base'
 
 #class webdao
@@ -20,13 +19,7 @@ class webdao.Eventbus extends este.Base
     super()
   
   ###*
-    Simple attr
-  ###
-  get: ->
-    11
-
-  ###*
-    Simple attr
+    Bus emmit
   ###
   emmit: (e) ->
     @dispatchEvent e
