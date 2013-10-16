@@ -15,6 +15,8 @@
   "homepage": "http://github.com/zag",
   "private": true,
   "dependencies": {
+    "closure-compiler": "http://closure-compiler.googlecode.com/files/compiler-latest.zip",
+    "closure-templates": "http://closure-templates.googlecode.com/files/closure-templates-for-javascript-latest.zip",
     "este-library": "git://github.com/steida/este-library.git#~4.1.4"
   }
 }
