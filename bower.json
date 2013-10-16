@@ -1,0 +1,20 @@
+{
+  "name": "webdao",
+  "version": "0.0.0",
+  "authors": [
+    "Alexandr Zahatski <me@zag.ru>"
+  ],
+  "description": "js library",
+  "main": "webdao.base",
+  "keywords": [
+    "react",
+    "google",
+    "closure"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/zag",
+  "private": true,
+  "dependencies": {
+    "este-library": "git://github.com/steida/este-library.git#~4.1.4"
+  }
+}
