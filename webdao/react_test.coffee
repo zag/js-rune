@@ -1,6 +1,6 @@
-suite 'este.react', ->
+suite 'webdao.react', ->
 
-  improve = este.react.improve
+  improve = webdao.react.improve
 
   context = null
   props = null
@@ -11,7 +11,7 @@ suite 'este.react', ->
     props = {}
     children = []
 
-  suite 'este.react.improve', ->
+  suite 'webdao.react.improve', ->
     test 'should work without args', (done) ->
       factory = (p_props, p_children) ->
         assert.lengthOf arguments, 0
