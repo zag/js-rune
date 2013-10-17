@@ -1,19 +1,19 @@
 ###*
   @fileoverview webdao.eventbus
 ###
-#class webdao.Eventbus extends este.Base
+#class webdao.Eventbus extends webdao.Base
 goog.provide 'webdao.Eventbus'
-goog.require 'este.Base'
+goog.require 'webdao.Base'
 
 #class webdao
 webdao.getEventbus = ->
   webdao.Eventbus.getInstance()
 
-class webdao.Eventbus extends este.Base
+class webdao.Eventbus extends webdao.Base
 
   ###*
     @constructor
-    @extends {este.Base}
+    @extends {webdao.Base}
   ###
   constructor: ->
     super()
