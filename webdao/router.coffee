@@ -32,8 +32,6 @@ webdao.router = webdao.react.create (`/** @lends {React.ReactComponent.prototype
     text = text() if goog.isFunction text 
     if typeof( text ) == 'string'
        return @div dangerouslySetInnerHTML: { __html: text }
-#   item.addParent @ if item instanceof este.Base
-#   console.log text
     text
 
 
