@@ -30,6 +30,8 @@ webdao.router = webdao.react.create (`/** @lends {React.ReactComponent.prototype
   render: ->
     text = @props['routes']['/' + @state['current_route']]
     text = text() if goog.isFunction text 
+    if text is undefined
+         return @span "Cant map route for #{ '/' + @state['current_route']}"
     if typeof( text ) == 'string'
        return @div dangerouslySetInnerHTML: { __html: text }
     text
