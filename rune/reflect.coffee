@@ -1,23 +1,23 @@
 ###*
   @fileoverview Reflect class for classes using events.
 ###
-goog.provide 'webdao.Reflect'
+goog.provide 'rune.Reflect'
 goog.require 'goog.asserts'
-goog.require 'webdao.Base'
-goog.require 'webdao.global'
+goog.require 'rune.Base'
+goog.require 'rune.global'
 
-class webdao.Reflect extends webdao.Base
+class rune.Reflect extends rune.Base
 
   ###*
     @constructor 
     @extends {goog.events.EventTarget}
   ###
   constructor: (obj)->
-    v = webdao.global.get obj
+    v = rune.global.get obj
     if v
        return v
     @parent_ = obj
-    webdao.global.put(obj, @)
+    rune.global.put(obj, @)
     super()
     
   ###*

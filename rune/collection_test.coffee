@@ -1,4 +1,4 @@
-suite 'webdao.Collection', ->
+suite 'rune.Collection', ->
 
   Collection = este.Collection
   collection =null

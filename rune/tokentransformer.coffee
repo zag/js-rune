@@ -7,9 +7,9 @@
   pushed.
 ###
 
-goog.provide 'webdao.history.TokenTransformer'
+goog.provide 'rune.history.TokenTransformer'
 
-class webdao.history.TokenTransformer
+class rune.history.TokenTransformer
 
   ###*
     @constructor

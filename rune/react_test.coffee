@@ -1,6 +1,6 @@
-suite 'webdao.react', ->
+suite 'rune.react', ->
 
-  improve = webdao.react.improve
+  improve = rune.react.improve
 
   context = null
   props = null
@@ -11,7 +11,7 @@ suite 'webdao.react', ->
     props = {}
     children = []
 
-  suite 'webdao.react.improve', ->
+  suite 'rune.react.improve', ->
     test 'should work without args', (done) ->
       factory = (p_props, p_children) ->
         assert.lengthOf arguments, 0

@@ -1,13 +1,13 @@
 ###*
   @fileoverview Base class for classes using events.
 ###
-goog.provide 'webdao.Base'
+goog.provide 'rune.Base'
 
 goog.require 'goog.asserts'
 goog.require 'goog.events.EventHandler'
 goog.require 'goog.events.EventTarget'
 
-class webdao.Base extends goog.events.EventTarget
+class rune.Base extends goog.events.EventTarget
 
   ###*
     @constructor

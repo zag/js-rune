@@ -1,11 +1,11 @@
 {
-  "name": "webdao",
+  "name": "rune",
   "version": "0.0.0",
   "authors": [
     "Alexandr Zahatski <me@zag.ru>"
   ],
   "description": "js library",
-  "main": "webdao.base",
+  "main": "rune.base",
   "keywords": [
     "react",
     "google",

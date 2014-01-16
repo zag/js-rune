@@ -1,17 +1,17 @@
 ###*
-  @fileoverview webdao.react.
-  @namespace webdao.react
+  @fileoverview rune.react.
+  @namespace rune.react
 ###
-goog.provide 'webdao.react'
-goog.provide 'webdao.react.create'
-goog.provide 'webdao.react.render'
+goog.provide 'rune.react'
+goog.provide 'rune.react.create'
+goog.provide 'rune.react.render'
 
 goog.require 'este.array'
 goog.require 'este.thirdParty.react'
 goog.require 'goog.asserts'
 goog.require 'goog.object'
-goog.require 'webdao.Eventbus'
-goog.require 'webdao.Reflect'
+goog.require 'rune.Eventbus'
+goog.require 'rune.Reflect'
 goog.require 'goog.events.Event'
 
 ###*
@@ -20,18 +20,18 @@ goog.require 'goog.events.Event'
   @param {Object} proto
   @return {function(*=, *=): React.ReactComponent}
 ###
-webdao.react.create = (proto) ->
-  webdao.react.syntaxSugarize proto
+rune.react.create = (proto) ->
+  rune.react.syntaxSugarize proto
   proto.emmit = (type, params ) ->
       ev  = new goog.events.Event type, @
       ev.param = params
-      webdao.Eventbus.getInstance().emmit ev
+      rune.Eventbus.getInstance().emmit ev
   proto.on = (src, type, fn, capture, handler) ->
-    v = new webdao.Reflect @
+    v = new rune.Reflect @
     v.on src, type, fn, capture, handler
  
   factory = React.createClass (`/** @lends {React.ReactComponent.prototype} */`) proto
-  webdao.react.improve factory
+  rune.react.improve factory
 
 ###*
   Render React component.
@@ -39,7 +39,7 @@ webdao.react.create = (proto) ->
   @param {Element} container
   @return {React.ReactComponent} Component instance rendered in container.
 ###
-webdao.react.render = (component, container) ->
+rune.react.render = (component, container) ->
   React.renderComponent component, container
 
 ###*
@@ -47,10 +47,10 @@ webdao.react.render = (component, container) ->
   @param {Object} proto
   @private
 ###
-webdao.react.syntaxSugarize = (proto) ->
+rune.react.syntaxSugarize = (proto) ->
   for tag, factory of React.DOM
     continue if !goog.isFunction factory
-    proto[tag] = webdao.react.improve factory
+    proto[tag] = rune.react.improve factory
   return
 
 ###*
@@ -59,7 +59,7 @@ webdao.react.syntaxSugarize = (proto) ->
   @return {function(*=, *=): React.ReactComponent}
   @private
 ###
-webdao.react.improve = (factory) ->
+rune.react.improve = (factory) ->
   ###*
     @param {*=} arg1
     @param {*=} arg2

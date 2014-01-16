@@ -10,18 +10,18 @@
   @see /demos/history/historyhash.html
 ###
 
-goog.provide 'webdao.History'
+goog.provide 'rune.History'
 
-goog.require 'webdao.Base'
-goog.require 'webdao.history.TokenTransformer'
+goog.require 'rune.Base'
+goog.require 'rune.history.TokenTransformer'
 goog.require 'goog.dom'
 goog.require 'goog.History'
 goog.require 'goog.history.Html5History'
 goog.require 'goog.labs.userAgent.platform'
 goog.require 'goog.Uri'
-goog.require 'webdao.Eventbus'
+goog.require 'rune.Eventbus'
 
-class webdao.History extends webdao.Base
+class rune.History extends rune.Base
 
   ###*
     @param {boolean=} forceHash If true, este.History will degrade to hash even
@@ -165,7 +165,7 @@ class webdao.History extends webdao.Base
     # because hash navigation needs '/' token prefix to render '#/' path prefix
     e.token = e.token.substring 1 if !@html5historyEnabled
     
-    webdao.Eventbus.getInstance().emmit e
+    rune.Eventbus.getInstance().emmit e
     #@dispatchEvent e
 
   ###*
